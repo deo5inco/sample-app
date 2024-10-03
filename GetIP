@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#Obtener la dirección IP
+ip=$(ip addr show | grep "inet" | awk '{print $2}' | cut -d/ -f1)
+
+echo "Las ips encontradas: $ip">Mis-ips.txt
+
+echo "Se guardo en el archivo Mis-ips.txt " $PWD
